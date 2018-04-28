@@ -20,7 +20,7 @@ script:
     EOF
 after_success:
   - export version=$(cat bootable/recovery/variables.h | grep "define TW_MAIN_VERSION_STR" | cut -d '"' -f2)
-  - cp $HOME/twrp/out/target/product/delos3geur/delos.img $HOME/twrp/TWRP-$version-delos3geur-$(date +"%Y%m%d").img
+  - cp $HOME/twrp/out/target/product/delos3geur/recovery.img $HOME/twrp/TWRP-$version-delos3geur-$(date +"%Y%m%d").img
 
 deploy:
   skip_cleanup: true
